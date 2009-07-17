@@ -1,0 +1,38 @@
+==============================================================================
+TOPIC: Portable high resolution cycle counter
+http://groups.google.com/group/pitp-computational-astrophysics-2009/t/c4a9004df69001dc?hl=en
+==============================================================================
+Date: Thurs, Jul 16 2009 10:14 pm
+From: CK <chanchikwan@gmail.com>
+
+
+Hi guys,
+
+In case you care about performance and want to time different part of
+your code, fftw3 provides a wonderful, portable, high resolution cycle
+counter.  If you are familiar with autoconf, it's fairly easy to
+incorporate it in your code.  Take a look at the "Cycle Counters"
+section in the fftw download page:
+
+    http://www.fftw.org/download.html
+
+or you can get it directly from here:
+
+    http://www.fftw.org/cycle.h
+
+If you don't use autoconf, I have copy and paste some scripts together
+to make it easier to use.  Just copy the following (modified)
+configure script:
+
+    apollo:/home/pitp017/cycle/mkcycle
+
+`./mkcycle` will check your system and produce the header file
+"cycle.h".  Include it in your code and the cycle counter is ready.
+Also, take a look at the very simple example
+
+   apollo:/home/pitp017/cycle/test.c
+
+which shows using a for-loop to copy array of double is usually faster
+than using memcpy().
+
+- CK
