@@ -1,5 +1,5 @@
-Easy portable high resolution cycle counter
-===========================================
+Easy to use portable high resolution cycle counter
+==================================================
 
 fftw3 provides a portable high resolution cycle counter.  It is
 described in the "Cycle Counters" section on the fftw download page:
