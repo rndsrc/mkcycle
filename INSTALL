@@ -1,36 +1,31 @@
 Installation/usage
 ==================
 
-1. To obtain a copy of mkcycle on your machine, you can simply use the
-   standard git clone method:
+1. The latest version of mkcycle is available on GitHub:
 
-      git clone git://nas-fermi.albanova.se/mkcycle
+    $ git clone https://github.com/chanchikwan/mkcycle.git
 
-   Alternatively, you can also download a gzipped tar-ball from
-   <http://nas-fermi.albanova.se/cgit.cgi/mkcycle.git> or
-   <http://nas-fermi.albanova.se/gitweb.cgi/mkcycle.git>.
-
-2. To build mkcycle, you need to have autoconf installed.  Simply cd
+2. To build mkcycle, you need to have autoconf installed.  Simply `cd`
    into the mkcycle directory and run:
-   
-      ./mk
-      ./mk clean
-   
-   A new executable "mkcycle" is generated.  `./mk clean` is not
-   necessary but it erases useless files.
+
+    $ ./bootstrap
+    $ ./bootstrap clean
+
+   A new executable "mkcycle" is generated.  The second command
+   `./bootstrap clean` is not necessary but it erases useless files.
 
 3. To use the cycle counter, copy the generated "mkcycle" executable
    to your source code directory and run
 
-      ./mkcycle
+    $ ./mkcycle
 
-   "mkcycle" is just like the standard "configure" script.  It check
-   your system and generate the file "cycle.h", which is the fftw3
-   cycle counter prefixed by the configure macro definitions.
+   "mkcycle" is just like a standard "configure" script.  It check
+   your system and generate "cycle.h", which is the fftw3 cycle
+   counter prefixed by the configure macro definitions.
 
    You can of course run `./mkcycle` within the mkcycle directory.  In
    that case, you can also compile "test.c" by
 
-      gcc test.c -o test -O3 -Wall
+    $ gcc test.c -o test -O3 -Wall
 
-   It is just an example showing you how to use the counter.
+   which is just an example showing you how to use the counter.
